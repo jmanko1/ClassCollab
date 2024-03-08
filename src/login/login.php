@@ -53,6 +53,8 @@ try {
     $conn->close();
 } catch(Exception $e) {
     $_SESSION['login_error'] = $e->getMessage();
+    header('Location: .');
+    exit();
 }
 
 header('Location: ../profile');
